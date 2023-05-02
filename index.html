@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendrier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <style>body {
+    background-color: #F5F5F5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  
+  .calendar-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+  }
+  
+  .calendar-day {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .calendar-day.current-month {
+    color: #000000;
+  }
+  
+  .calendar-day:not(.current-month) {
+    color: #BFBFBF;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 600px;
+    }
+  }</style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Calendrier</h1>
+    <div class="calendar"></div>
+
+    <button class="prev-button">Précédent</button>
+    <button class="next-button">Suivant</button>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
